@@ -6,7 +6,7 @@ const token = "YOUR TOKEN"
 
 // CONFIGURATION
 
-var prefix = (".") // LE PREFIX (PAS TOUT LE TEMPS PRISE EN COMPTE PAR LE CODE)
+var prefix = (".") // THE PREFIX
 
 bot.on('ready', () => {
 
@@ -21,7 +21,7 @@ bot.login(token);
 bot.on('message', message => {
     if(message.content[0] === prefix) {
         let splitMessage = message.content.split(" ")
-            if(splitMessage[0] === '.stats'){
+            if(splitMessage[0] === prefix + 'stats'){
 
             if(message.deletable) message.delete()
             
